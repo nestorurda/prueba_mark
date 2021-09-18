@@ -1,0 +1,14 @@
+<% @marks.each do |mark| %>
+      <tr>
+        <td><%= mark.category.name %></td>
+        <td><% mark.category.subcategories.each do |subcategory| %>
+        |<%= subcategory.name %>|
+        <% end %></td>
+        <td><%= mark.name %><br><%= mark.url %></td>
+        <td><%= mark.type.name %></td>
+        <td><%= mark.category.status %></td>
+        <td><%= link_to 'Show', mark ,remote: true%></td>
+        <td><%= link_to 'Edit', edit_mark_path(mark),remote: true %></td>
+        <td><%= link_to 'Destroy', mark, method: :delete, data: { confirm: 'Are you sure?' },remote: true%></td>
+      </tr>
+<% end %>
