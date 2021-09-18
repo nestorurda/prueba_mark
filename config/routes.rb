@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :marks
   get '/subcat',to:'marks#update_subcategory', as:'updatesub'
   get '/api/category/:id', to:'marks#respond_json'
+  get '/grafico',to:'marks#grafico',as:'grafico'
   resources :subcategories
   resources :categories
   root 'marks#index'
