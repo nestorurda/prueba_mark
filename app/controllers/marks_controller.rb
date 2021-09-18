@@ -14,6 +14,8 @@ def update_subcategory
  end
 end
 
+def grafico
+end
 
   # GET /marks/1 or /marks/1.json
   def show
